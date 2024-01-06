@@ -1,29 +1,45 @@
-import { useState, Fragment, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import { type restParameterType } from '@/shared/interfaces/common';
+import React, { Fragment } from 'react';
 
-const LazyImage = ({ placeholder, src, alt, ...rest }) => {
-  const [loading, setLoading] = useState(true);
+export interface lazyImageProps {
+  src: string;
+  alt: string;
+  placeholder: React.ReactNode;
+  rest?: restParameterType;
+}
 
-  useEffect(() => {
+class LazyImage extends React.Component<
+  lazyImageProps,
+  {
+    loading: boolean;
+  },
+  any
+> {
+  constructor(props: lazyImageProps) {
+    super(props);
+    this.state = { loading: true };
+  }
+
+  componentDidMount(): void {
     const imageToLoad = new Image();
-    imageToLoad.src = src;
+    imageToLoad.src = this.props.src;
 
     imageToLoad.onload = () => {
-      setLoading(false);
+      this.setState({ loading: false });
     };
-  }, [src]);
+  }
 
-  return (
-    <Fragment>
-      {loading ? placeholder : <img src={src} alt={alt} {...rest} />}
-    </Fragment>
-  );
-};
-
-LazyImage.propTypes = {
-  placeholder: PropTypes.node,
-  alt: PropTypes.string,
-  src: PropTypes.string,
-};
+  render(): React.ReactNode {
+    return (
+      <Fragment>
+        {this.state.loading ? (
+          this.props.placeholder
+        ) : (
+          <img src={this.props.src} alt={this.props.alt} {...this.props.rest} />
+        )}
+      </Fragment>
+    );
+  }
+}
 
 export default LazyImage;

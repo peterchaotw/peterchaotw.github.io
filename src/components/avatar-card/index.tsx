@@ -1,22 +1,24 @@
-import PropTypes from 'prop-types';
-import { fallbackImage, skeleton } from '../../helpers/utils';
+import {type GithubUserInfo} from 'src/shared/interfaces/config.interface';
+import type GithubProfileConfig from 'src/shared/interfaces/config.interface';
 import LazyImage from '../lazy-image';
+import Skeleton from '../skeleton';
+import React from 'react';
+import { connect } from 'react-redux';
+import { SkeletonConfigs } from '../../assets/consts';
+import { fallbackImage } from '../../assets/images';
 
-const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
-  return (
-    <div className="card shadow-lg compact bg-base-100">
-      <div className="grid place-items-center py-8">
-        {loading || !profile ? (
-          <div className="avatar opacity-90">
-            <div className="mb-8 rounded-full w-32 h-32">
-              {skeleton({
-                width: 'w-full',
-                height: 'h-full',
-                shape: '',
-              })}
-            </div>
-          </div>
-        ) : (
+class AvatarCard extends React.Component<
+  { profile: GithubUserInfo; resume?: string },
+  any,
+  any
+> {
+  render() {
+    const { profile, resume } = this.props;
+    const avatarRing = false;
+
+    return (
+      <div className="card shadow-lg compact bg-base-100">
+        <div className="grid place-items-center py-8">
           <div className="avatar opacity-90">
             <div
               className={`mb-8 rounded-full w-32 h-32 ${
@@ -28,41 +30,25 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
               {
                 <LazyImage
                   src={profile.avatar ? profile.avatar : fallbackImage}
-                  alt={profile.name}
-                  placeholder={skeleton({
-                    width: 'w-full',
-                    height: 'h-full',
-                    shape: '',
-                  })}
+                  alt={profile.name ?? ''}
+                  placeholder={<Skeleton {...SkeletonConfigs.full} />}
                 />
               }
             </div>
           </div>
-        )}
-        <div className="text-center mx-auto px-8">
-          <h5 className="font-bold text-2xl">
-            {loading || !profile ? (
-              skeleton({ width: 'w-48', height: 'h-8' })
-            ) : (
+          <div className="text-center mx-auto px-8">
+            <h5 className="font-bold text-2xl">
               <span className="text-base-content opacity-70">
                 {profile.name}
               </span>
-            )}
-          </h5>
-          <div className="mt-3 text-base-content text-opacity-60 font-mono">
-            {loading || !profile
-              ? skeleton({ width: 'w-48', height: 'h-5' })
-              : profile.bio}
-          </div>
-        </div>
-        {resume?.fileUrl &&
-          (loading ? (
-            <div className="mt-6">
-              {skeleton({ width: 'w-40', height: 'h-8' })}
+            </h5>
+            <div className="mt-3 text-base-content text-opacity-60 font-mono">
+              {profile.bio}
             </div>
-          ) : (
+          </div>
+          {resume && (
             <a
-              href={resume.fileUrl}
+              href={resume}
               target="_blank"
               className="btn btn-outline btn-sm text-xs mt-6 opacity-50"
               download
@@ -70,19 +56,16 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
             >
               Download Resume
             </a>
-          ))}
+          )}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+}
+const mapStateToProps = (state: GithubProfileConfig) => {
+  return {
+    profile: state.github,
+    resume: state.resume,
+  };
 };
-
-AvatarCard.propTypes = {
-  profile: PropTypes.object,
-  loading: PropTypes.bool.isRequired,
-  avatarRing: PropTypes.bool.isRequired,
-  resume: PropTypes.shape({
-    fileUrl: PropTypes.string,
-  }),
-};
-
-export default AvatarCard;
+export default connect(mapStateToProps)(AvatarCard);
