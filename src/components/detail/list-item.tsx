@@ -17,7 +17,7 @@ export default class ListItem extends React.Component<
 
     return (
       <a
-        href={linkValue}
+        href={linkValue ?? ''}
         target="_blank"
         rel="noreferrer"
         className="flex justify-start py-2 px-1 items-center"
