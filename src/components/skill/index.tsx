@@ -1,6 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { type ReactNode } from 'react';
 import { connect } from 'react-redux';
-import { type SkillConfig } from 'src/shared/interfaces';
+import { type SkillConfig } from '../../shared/interfaces';
 import React from 'react';
 import SkillType from '../../shared/enums/skill-type';
 
@@ -17,13 +20,13 @@ class Skill extends React.Component<{ skills: SkillConfig[] }, any, any> {
           <div className="p-3 flow-root">
             <div className="-m-1 flex flex-wrap justify-center">
               <table className="table table-xs table-pin-rows table-pin-cols">
-                {Object.values(SkillType).map((s, index) => {
+                {Object.values(SkillType).map((s) => {
                   const skillset = this.props.skills
                     .where((sk) => sk.type === s)
                     .orderByDescending((sk) => sk.usageTime.year)
                     .orderByDescending((sk) => sk.usageTime.month)
                     .toArray();
-                  if (!isNaN(s) || skillset.length === 0) return;
+                  if (!isNaN(s as number) || skillset.length === 0) return;
 
                   return (
                     <>

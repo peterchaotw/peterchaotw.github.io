@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import React from 'react';
 import { parse } from 'date-fns';
 import { type CertificationConfig } from '../../shared/interfaces/config.interface';
@@ -5,8 +6,8 @@ import { defaultColors } from '../../assets/consts';
 
 export default class ListItem extends React.Component<
   CertificationConfig,
-  any,
-  any
+  unknown,
+  unknown
 > {
   getYear() {
     try {
@@ -14,14 +15,7 @@ export default class ListItem extends React.Component<
 
       return date.getFullYear();
     } catch (error) {
-      return (
-        <Skeleton
-          {...{
-            width: 'w-5/12',
-            height: 'h-4',
-          }}
-        />
-      );
+      return <div className="skeleton w-5/12 h-4 rounded-full" />;
     }
   }
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { type IHooks } from '@/shared/interfaces';
+import { type IHooks } from '../../shared/interfaces';
 
 const withDarMode = (): IHooks<string | undefined> => {
   const [mode, setMode] = useState<string | undefined>();

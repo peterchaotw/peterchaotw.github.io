@@ -1,3 +1,5 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import React from 'react';
 import { type WorkExperienceConfig } from '../../shared/interfaces/config.interface';
@@ -6,8 +8,8 @@ import SkillType from '../../shared/enums/skill-type';
 
 export default class ProjectItem extends React.Component<
   WorkExperienceConfig,
-  any,
-  any
+  unknown,
+  unknown
 > {
   render(): React.ReactNode {
     return (
@@ -66,13 +68,23 @@ export default class ProjectItem extends React.Component<
                       <tbody>
                         {Object.values(SkillType).map((s, idx) => {
                           const skillset = this.props.skills
-                            .where((sk) => sk.type === SkillType[s])
+                            .where(
+                              (sk) =>
+                                sk.type ===
+                                SkillType[s as keyof typeof SkillType],
+                            )
                             .toArray();
-                          if (!isNaN(s) || skillset.length === 0) return;
+                          if (!isNaN(s as number) || skillset.length === 0)
+                            return;
 
                           return (
                             <tr key={idx}>
-                              <th>{s.replace(/([A-Z])/g, ' $1').trim()}</th>
+                              <th>
+                                {s
+                                  .toString()
+                                  .replace(/([A-Z])/g, ' $1')
+                                  .trim()}
+                              </th>
                               <td>
                                 {skillset.map((config, idx2) => (
                                   <div

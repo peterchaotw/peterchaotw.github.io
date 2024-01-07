@@ -1,4 +1,4 @@
-import type ILinked from '@/shared/interfaces/linked.interface';
+import type ILinked from '../shared/interfaces/linked.interface';
 import {
   AiFillGithub,
   AiFillInstagram,
@@ -9,7 +9,7 @@ import { MdLocationOn } from 'react-icons/md';
 import { RiMailFill } from 'react-icons/ri';
 import { SiTwitter } from 'react-icons/si';
 
-const Linked: Record<any, ILinked[]> = {
+const Linked: Record<any, ILinked> = {
   location: {
     icon: <MdLocationOn />,
     title: 'Based in:',

@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { Fragment, type ReactNode } from 'react';
 import AvatarCard from './avatar-card';
@@ -9,16 +12,11 @@ import Footer from './footer';
 import '../assets/index.css';
 import { defaultColors } from '../assets/consts';
 import { connect } from 'react-redux';
-import { type AppDispatch } from '../store';
 import { githubThunk } from '../store/slices/gitprofile.slice';
 import type GithubProfileConfig from '../shared/interfaces/config.interface';
 import Language from './language';
 import WorkProject from './work-project';
-class GitProfile extends React.Component<
-  GithubProfileConfig & { dispatch: AppDispatch },
-  any,
-  any
-> {
+class GitProfile extends React.Component<any, any, any> {
   async componentDidMount(): Promise<void> {
     await this.props.dispatch(githubThunk(this.props.github));
   }

@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import React, { type ReactNode } from 'react';
 import type ILinked from 'src/shared/interfaces/linked.interface';
 
 export default class ListItem extends React.Component<
   ILinked & { isEmpty: boolean; key: string },
-  any,
-  any
+  unknown,
+  unknown
 > {
   static defaultProps = {
     isEmpty: false,
@@ -16,13 +17,13 @@ export default class ListItem extends React.Component<
 
     return (
       <a
-        href={linkValue}
+        ref={linkValue}
         target="_blank"
         rel="noreferrer"
         className="flex justify-start py-2 px-1 items-center"
       >
         <div className="flex-grow font-medium gap-2 flex items-center my-1">
-          {icon} {title}
+          {icon as JSX.Element} {title}
         </div>
         <div
           className={`${

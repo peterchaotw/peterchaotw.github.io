@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
 /* eslint-disable @typescript-eslint/no-for-in-array */
 /* eslint-disable array-callback-return */
 import { createSlice } from '@reduxjs/toolkit';
 import config from '../../assets/gitprofile.config';
-import { parse, intervalToDuration } from 'date-fns';
+import { parse } from 'date-fns';
 import {
   type SkillConfig,
   type WorkExperienceConfig,
@@ -26,7 +27,7 @@ const getSkills = (workProj: WorkExperienceConfig[]): SkillConfig[] => {
     .toArray()
     .map((w) => {
       w.skills.map((s) => {
-        let _skillMap: SkillMap = from(skillMap).firstOrDefault(
+        let _skillMap = from(skillMap).firstOrDefault(
           (_s) => _s.name === s.name,
         );
         if (!_skillMap) {
@@ -67,7 +68,9 @@ const getSkills = (workProj: WorkExperienceConfig[]): SkillConfig[] => {
 
   return skillMap;
 };
-const initialState: SkillConfig[] = getSkills(config.workProjects);
+const initialState: SkillConfig[] = getSkills(
+  config.workProjects as unknown as WorkExperienceConfig[],
+);
 export const skillSlice = createSlice({
   name: 'gitprofile/skill',
   initialState,

@@ -1,5 +1,3 @@
-import { compose } from '@reduxjs/toolkit';
-import { withTranslation, WithTranslation } from 'react-i18next';
 import { Provider } from 'react-redux';
 import { HelmetProvider } from 'react-helmet-async';
 import './App.css';
@@ -9,10 +7,6 @@ import ErrorBoundary from './components/error-boundary';
 import store from './store';
 
 class App extends React.Component {
-  constructor(props: any) {
-    super(props);
-  }
-
   render(): React.ReactNode {
     return (
       <Provider store={store}>
@@ -30,4 +24,4 @@ class App extends React.Component {
   }
 }
 
-export default compose(withTranslation())(App);
+export default App;

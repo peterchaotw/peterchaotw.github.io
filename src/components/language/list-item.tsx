@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { type ReactNode } from 'react';
 import LanguageType from '../../shared/enums/language-type';
 import { type LanguageConfig } from '../../shared/interfaces/config.interface';
@@ -13,7 +14,9 @@ export default class ListItem extends React.Component<
 
   render(): ReactNode {
     const { proficiency, name } = this.props;
-    const max = Object.keys(LanguageType).filter(isNaN).length;
+    const max = Object.keys(LanguageType).filter((value: unknown) =>
+      isNaN(value as number),
+    ).length;
 
     return (
       <>

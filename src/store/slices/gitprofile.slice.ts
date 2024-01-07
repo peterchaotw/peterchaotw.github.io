@@ -1,4 +1,8 @@
-import { type PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import {
+  type PayloadAction,
+  createAsyncThunk,
+  createSlice,
+} from '@reduxjs/toolkit';
 import * as statusSlice from './status.slice';
 import { type GithubUserInfo } from '../../shared/interfaces/config.interface';
 import { cast } from '../../shared/helpers/utilties';
@@ -24,10 +28,10 @@ const gitprofileSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(githubThunk.pending, (state) => {
+      .addCase(githubThunk.pending, () => {
         statusSlice.update({ loading: true });
       })
-      .addCase(githubThunk.rejected, (state, { payload }) => {
+      .addCase(githubThunk.rejected, () => {
         statusSlice.update({ loading: false });
       })
       .addCase(githubThunk.fulfilled, (state, { payload }) => {

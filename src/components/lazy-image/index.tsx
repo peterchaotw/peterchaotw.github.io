@@ -1,4 +1,4 @@
-import { type restParameterType } from '@/shared/interfaces/common';
+import { type restParameterType } from '../../shared/interfaces/common';
 import React, { Fragment } from 'react';
 
 export interface lazyImageProps {

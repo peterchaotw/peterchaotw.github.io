@@ -1,5 +1,5 @@
-import {type GithubProfileStatus} from '@/shared/interfaces/config.interface';
-import type GithubProfileConfig from '@/shared/interfaces/config.interface';
+import { type GithubProfileStatus } from '../../shared/interfaces/config.interface';
+import type GithubProfileConfig from '../../shared/interfaces/config.interface';
 import React from 'react';
 import { connect } from 'react-redux';
 export * from './erros';

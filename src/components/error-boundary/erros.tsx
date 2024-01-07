@@ -1,4 +1,4 @@
-import type IError from '@/shared/interfaces/error.interface';
+import type IError from '../../shared/interfaces/error.interface';
 
 export const genericError: IError = {
   status: 500,

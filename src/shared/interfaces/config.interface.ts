@@ -1,4 +1,3 @@
-import type DevelopmentMethodology from '../enums/development-methodology-type';
 import type CompetencyLevel from '../enums/competency-level';
 import type SkillType from '../enums/skill-type';
 import type IError from './error.interface';

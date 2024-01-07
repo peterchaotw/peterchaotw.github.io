@@ -1,9 +1,13 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { type WorkExperienceConfig } from '../../shared/interfaces';
 import ProjectItem from './project-item';
-import { defaultColors } from '../../assets/consts';
 import { CgArrowUpO } from 'react-icons/cg';
 import { format, parse } from 'date-fns';
 
@@ -86,7 +90,7 @@ class WorkProject extends React.Component<
   }
 }
 
-const mapStateToProps = (state: unknown) => {
+const mapStateToProps = (state: any) => {
   return { workexperience: state.workexperience };
 };
 

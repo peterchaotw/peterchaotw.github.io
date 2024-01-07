@@ -1,5 +1,5 @@
-import { type GithubUserInfo } from '@/shared/interfaces';
-import type IError from '@/shared/interfaces/error.interface';
+import { type GithubUserInfo } from '../../../shared/interfaces';
+import type IError from '../../../shared/interfaces/error.interface';
 import axios from 'axios';
 
 const instance = axios.create({

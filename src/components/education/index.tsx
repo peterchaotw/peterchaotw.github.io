@@ -1,3 +1,8 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable react/jsx-props-no-spreading */
 import { type EducationConfig } from '../../shared/interfaces';
 import React, { Fragment, type ReactNode } from 'react';
 import ListItem from './list-item';
@@ -36,7 +41,7 @@ class Education extends React.Component<
     );
   }
 }
-const mapStateToProps = (state: unknown) => {
+const mapStateToProps = (state: any) => {
   return { education: state.education };
 };
 export default connect(mapStateToProps)(Education);
