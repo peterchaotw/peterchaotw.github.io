@@ -17,13 +17,13 @@ export default class ListItem extends React.Component<
 
     return (
       <a
-        ref={linkValue}
+        href={linkValue}
         target="_blank"
         rel="noreferrer"
         className="flex justify-start py-2 px-1 items-center"
       >
         <div className="flex-grow font-medium gap-2 flex items-center my-1">
-          {icon as JSX.Element} {title}
+          {icon} {title}
         </div>
         <div
           className={`${

@@ -12,7 +12,7 @@ const config = {
     },
   },
   social: {
-    linkedin: 'peterchaotw',
+    linkedin: 'peter-chao',
     github: 'peterchaotw',
     email: 'peter.chao.forjob@gmail.com',
   },
