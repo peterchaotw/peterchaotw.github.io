@@ -1,3 +1,8 @@
+/* eslint-disable @typescript-eslint/no-redundant-type-constituents */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { type GithubProfileStatus } from '../../shared/interfaces/config.interface';
 import type GithubProfileConfig from '../../shared/interfaces/config.interface';
 import React from 'react';
@@ -8,10 +13,6 @@ class ErrorBoundary extends React.Component<
   any,
   any
 > {
-  constructor(props: any) {
-    super(props);
-  }
-
   render() {
     if (this.props.Error) {
       const { status, title, subTitle } = this.props.Error;

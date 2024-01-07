@@ -1,7 +1,11 @@
-import React, { Fragment } from 'react';
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import React from 'react';
 import { connect } from 'react-redux';
-import ListItem from './list-item';
-import { type LanguageConfig } from 'src/shared/interfaces/config.interface';
+import { type LanguageConfig } from '../../shared/interfaces/config.interface';
+import LanguageType from '../../shared/enums/language-type';
 
 class Language extends React.Component<
   { language: LanguageConfig[] },
@@ -9,15 +13,41 @@ class Language extends React.Component<
   any
 > {
   render(): React.ReactNode {
+    const max = Object.keys(LanguageType).filter((value: unknown) =>
+      isNaN(value as number),
+    ).length;
+
     return (
       <div className="card shadow-lg compact bg-base-100">
         <div className="card-body">
-          <div className="text-base-content text-opacity-60">
-            <Fragment>
-              {this.props.language.map((value, idx) => {
-                return <ListItem key={idx} {...value} />;
-              })}
-            </Fragment>
+          <div className="mx-3">
+            <h5 className="card-title">
+              <span className="text-base-content opacity-70">Language</span>
+            </h5>
+          </div>
+          <div className="p-3 flow-root">
+            <div className="-m-1 flex flex-wrap justify-center">
+              <table className="table table-xs table-pin-rows table-pin-cols">
+                {this.props.language.map((value, idx) => {
+                  return (
+                    <>
+                      <tbody>
+                        <tr key={idx}>
+                          <td className="w-50">{value.name}</td>
+                          <td className="w-full">
+                            <progress
+                              className="progress w-full"
+                              value={value.proficiency + 1}
+                              max={max}
+                            ></progress>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </>
+                  );
+                })}
+              </table>
+            </div>
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type ILinked from '../shared/interfaces/linked.interface';
 import {
   AiFillGithub,

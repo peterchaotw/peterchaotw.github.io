@@ -66,6 +66,14 @@ export default class ProjectItem extends React.Component<
                   <div className="overflow-x-auto">
                     <table className="table">
                       <tbody>
+                        <tr>
+                          <th>Team Size</th>
+                          <td>{this.props.teamSize}</td>
+                        </tr>
+                        <tr>
+                          <th>Role</th>
+                          <td>{this.props.role}</td>
+                        </tr>
                         {Object.values(SkillType).map((s, idx) => {
                           const skillset = this.props.skills
                             .where(
