@@ -4,6 +4,7 @@ enum SkillType {
   Tool,
   Database,
   DevelopmentMethodology,
+  OperationSystem,
   Other,
 }
 

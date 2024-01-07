@@ -1,6 +1,5 @@
 import React from 'react';
 import { parse } from 'date-fns';
-import Skeleton from '../skeleton';
 import { type CertificationConfig } from '../../shared/interfaces/config.interface';
 import { defaultColors } from '../../assets/consts';
 
@@ -36,21 +35,11 @@ export default class ListItem extends React.Component<
         <div className="my-0.5 text-xs">{this.getYear()}</div>
         <div className="font-semibold">
           <a href={this.props.link} target="_blank" rel="noreferrer">
-            {this.props.name ?? (
-              <Skeleton
-                {...{
-                  width: 'w-6/12',
-                  height: 'h-4',
-                  className: 'my-1.5',
-                }}
-              />
-            )}
+            {this.props.name ?? <div className="skeleton w-6/12 h-4 my-1.5" />}
           </a>
         </div>
         <h3 className="mb-4 font-normal">
-          {this.props.description ?? (
-            <Skeleton {...{ width: 'w-6/12', height: 'h-3' }} />
-          )}
+          {this.props.description ?? <div className="skeleton w-6/12 h-3 " />}
         </h3>
       </li>
     );

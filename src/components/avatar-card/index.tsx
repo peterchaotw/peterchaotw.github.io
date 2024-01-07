@@ -1,10 +1,8 @@
-import {type GithubUserInfo} from 'src/shared/interfaces/config.interface';
+import { type GithubUserInfo } from 'src/shared/interfaces/config.interface';
 import type GithubProfileConfig from 'src/shared/interfaces/config.interface';
 import LazyImage from '../lazy-image';
-import Skeleton from '../skeleton';
 import React from 'react';
 import { connect } from 'react-redux';
-import { SkeletonConfigs } from '../../assets/consts';
 import { fallbackImage } from '../../assets/images';
 
 class AvatarCard extends React.Component<
@@ -29,9 +27,11 @@ class AvatarCard extends React.Component<
             >
               {
                 <LazyImage
-                  src={profile.avatar ? profile.avatar : fallbackImage}
+                  src={profile.avatar ?? fallbackImage}
                   alt={profile.name ?? ''}
-                  placeholder={<Skeleton {...SkeletonConfigs.full} />}
+                  placeholder={
+                    <div className="skeleton w-full h-full rounded-full" />
+                  }
                 />
               }
             </div>

@@ -19,17 +19,16 @@ export interface GithubUserInfo {
 }
 
 export interface WorkExperienceConfig {
-  project: string;
+  name: string;
   startTime: string;
-  endTime: string;
+  endTime?: string;
   teamSize: number;
   skills: SkillConfig[];
-  utilies: string[];
-  developmentMethodologies: string[];
   role: string;
   description: React.ReactNode | string;
   company: string;
-  developmentMethodology: DevelopmentMethodology;
+  responsibilities: string[];
+  assignedPhase: string[];
 }
 
 export type SocialConfig = Record<string, string>;
@@ -60,7 +59,6 @@ export interface SkillConfig {
     month: number;
   };
   competencyLevel: CompetencyLevel;
-  relations: WorkExperienceConfig[];
   type: SkillType;
   versions: string[];
 }

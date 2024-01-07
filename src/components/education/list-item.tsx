@@ -1,5 +1,4 @@
 import React from 'react';
-import Skeleton from '../skeleton';
 import { format, parse } from 'date-fns';
 import { defaultColors } from '../../assets/consts';
 import { type EducationConfig } from '../../shared/interfaces/config.interface';
@@ -16,14 +15,7 @@ export default class ListItem extends React.Component<
 
       return `${format(from, 'yyyy-MM')} - ${format(to, 'yyyy-MM')}`;
     } catch (error) {
-      return (
-        <Skeleton
-          {...{
-            width: 'w-5/12',
-            height: 'h-4',
-          }}
-        />
-      );
+      return <div className="skeleton w-5/12 h-4 " />;
     }
   }
 
@@ -36,20 +28,10 @@ export default class ListItem extends React.Component<
         ></div>
         <div className="my-0.5 text-xs">{this.getTime()}</div>
         <h3 className="font-semibold">
-          {this.props.degree ?? (
-            <Skeleton
-              {...{
-                width: 'w-6/12',
-                height: 'h-4',
-                className: 'my-1.5',
-              }}
-            />
-          )}
+          {this.props.degree ?? <div className="skeleton w-6/12 h-4 my-1.5" />}
         </h3>
         <div className="mb-4 font-normal">
-          {this.props.institution ?? (
-            <Skeleton {...{ width: 'w-6/12', height: 'h-3' }} />
-          )}
+          {this.props.institution ?? <div className="skeleton w-6/12 h-3 " />}
         </div>
       </li>
     );

@@ -2,12 +2,11 @@ import { type EducationConfig } from '../../shared/interfaces';
 import React, { Fragment, type ReactNode } from 'react';
 import ListItem from './list-item';
 import { connect } from 'react-redux';
-import { from } from 'linq-to-typescript';
 
 class Education extends React.Component<
   { education: EducationConfig[] },
-  any,
-  any
+  unknown,
+  unknown
 > {
   render(): ReactNode {
     return (
@@ -22,7 +21,7 @@ class Education extends React.Component<
             <div className="text-base-content text-opacity-60">
               <ol className="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
                 <Fragment>
-                  {from(this.props.education)
+                  {this.props.education
                     .orderByDescending((config) => config.from)
                     .toArray()
                     .map((item, index) => (
@@ -37,7 +36,7 @@ class Education extends React.Component<
     );
   }
 }
-const mapStateToProps = (state: any) => {
+const mapStateToProps = (state: unknown) => {
   return { education: state.education };
 };
 export default connect(mapStateToProps)(Education);

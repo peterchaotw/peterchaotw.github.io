@@ -6,6 +6,8 @@ import errorMiddleware from './middlewares/status.middleware';
 import certificationReducer from './slices/certification.slice';
 import educationReducer from './slices/education.slice';
 import languageReducer from './slices/language.slice';
+import workexperienceReducer from './slices/workexperience.slice';
+import skillReducer from './slices/skill.slice';
 
 const reducers = combineReducers({
   github: githubprofileReducer,
@@ -14,6 +16,8 @@ const reducers = combineReducers({
   certification: certificationReducer,
   education: educationReducer,
   language: languageReducer,
+  workexperience: workexperienceReducer,
+  skill: skillReducer,
 });
 const store = configureStore({
   reducer: reducers,

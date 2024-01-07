@@ -1,12 +1,14 @@
-import daisyui from 'daisyui'
+import daisyui from 'daisyui';
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    listStyleType: {
+      none: 'none',
+      square: 'square',
+      roman: 'upper-roman',
+    },
     extend: {},
   },
   plugins: [daisyui],
@@ -42,8 +44,7 @@ export default {
       'night',
       'coffee',
       'winter',
-      'procyon'
+      'procyon',
     ],
   },
-}
-
+};

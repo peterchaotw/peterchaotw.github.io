@@ -2,7 +2,6 @@ import React, { Fragment, ReactNode } from 'react';
 import { type CertificationConfig } from '../../shared/interfaces';
 import ListItem from './list-item';
 import { connect } from 'react-redux';
-import { from } from 'linq-to-typescript';
 
 class Certification extends React.Component<
   { certifications: CertificationConfig[] },
@@ -24,7 +23,7 @@ class Certification extends React.Component<
             <div className="text-base-content text-opacity-60">
               <ol className="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
                 <Fragment>
-                  {from(this.props.certifications)
+                  {this.props.certifications
                     .orderByDescending((config) => config.date)
                     .toArray()
                     .map((certification, index) => (

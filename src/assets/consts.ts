@@ -1,11 +1,3 @@
-export const SkeletonConfigs = {
-  full: {
-    width: 'w-full',
-    height: 'h-full',
-    shape: 'rounded-full',
-  },
-};
-
 export const defaultColors = {
   bg: 'bg-base-300',
 };
