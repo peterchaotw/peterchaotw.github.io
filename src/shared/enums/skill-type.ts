@@ -1,8 +1,8 @@
 enum SkillType {
-  Framework,
   ProgrammingLanguage,
-  Tool,
+  Framework,
   Database,
+  Tool,
   DevelopmentMethodology,
   OperationSystem,
   Other,
