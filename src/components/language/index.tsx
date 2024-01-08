@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import React from 'react';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { type LanguageConfig } from '../../shared/interfaces/config.interface';
 import LanguageType from '../../shared/enums/language-type';
@@ -30,7 +30,7 @@ class Language extends React.Component<
               <table className="table table-xs table-pin-rows table-pin-cols">
                 {this.props.language.map((value, idx) => {
                   return (
-                    <>
+                    <Fragment key={idx}>
                       <tbody>
                         <tr key={idx}>
                           <td className="w-50">{value.name}</td>
@@ -43,7 +43,7 @@ class Language extends React.Component<
                           </td>
                         </tr>
                       </tbody>
-                    </>
+                    </Fragment>
                   );
                 })}
               </table>
