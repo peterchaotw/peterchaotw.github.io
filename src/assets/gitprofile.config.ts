@@ -60,6 +60,7 @@ const config = {
       teamSize: 21,
       role: 'Member',
       company: 'A',
+      location: 'Japan',
       description: `Due to the bank's internal system OS upgrade, program modifications, and new development.`,
       assignedPhase: [
         'Requirements analysis',
@@ -109,6 +110,7 @@ const config = {
       teamSize: 11,
       role: 'Member',
       company: 'A',
+      location: 'Japan',
       description: `Recreating APIs and screens to enhance user experience.`,
       assignedPhase: ['Documentation ', 'Development', 'Testing'],
       responsibilities: [
@@ -199,6 +201,7 @@ const config = {
       startTime: '2022-9',
       endTime: '2023-3',
       teamSize: 7,
+      location: 'Japan',
       role: 'Leader',
       company: 'A',
       description: `A labor and social insurance consultant, focusing on the creation of employment contracts, is responsible for:
@@ -293,6 +296,7 @@ const config = {
       startTime: '2022-02',
       endTime: '2022-08',
       teamSize: 30,
+      location: 'Japan',
       skills: [
         {
           name: 'Typescript',
@@ -300,6 +304,14 @@ const config = {
         },
         {
           name: 'Javascript',
+          type: 'ProgrammingLanguage',
+        },
+        {
+          name: 'HTML',
+          type: 'ProgrammingLanguage',
+        },
+        {
+          name: 'CSS',
           type: 'ProgrammingLanguage',
         },
         {
@@ -371,6 +383,7 @@ const config = {
       startTime: '2021-06',
       endTime: '2022-02',
       teamSize: 50,
+      location: 'Japan',
       role: 'Member',
       company: 'A',
       description: `Investigation of bugs in each subsystem due to infrastructure migration.`,
@@ -388,6 +401,14 @@ const config = {
         },
         {
           name: 'Javascript',
+          type: 'ProgrammingLanguage',
+        },
+        {
+          name: 'HTML',
+          type: 'ProgrammingLanguage',
+        },
+        {
+          name: 'CSS',
           type: 'ProgrammingLanguage',
         },
         {
@@ -438,6 +459,7 @@ const config = {
       startTime: '2020-1',
       endTime: '2021-6',
       teamSize: 10,
+      location: 'Japan',
       role: 'Sub Leader',
       company: 'A',
       description: `Following the discontinuation of Microsoft's SilverLight support, we will rebuild the common foundation for 17 business applications. We will conduct modifications to the business applications only to the extent necessary.`,
@@ -510,6 +532,7 @@ const config = {
       startTime: '2019-8',
       endTime: '2019-12',
       teamSize: 10,
+      location: 'Japan',
       role: 'Member',
       company: 'A',
       description: `Development of a Pharmaceutical Management System`,
@@ -530,11 +553,19 @@ const config = {
           type: 'ProgrammingLanguage',
         },
         {
+          name: 'CSS',
+          type: 'ProgrammingLanguage',
+        },
+        {
           name: 'T-SQL',
           type: 'ProgrammingLanguage',
         },
         {
           name: 'Javascript',
+          type: 'ProgrammingLanguage',
+        },
+        {
+          name: 'HTML',
           type: 'ProgrammingLanguage',
         },
         {
@@ -578,6 +609,7 @@ const config = {
       endTime: '2019-7',
       teamSize: 3,
       role: 'Member',
+      location: 'Japan',
       company: 'A',
       description: `Unauthorized Fund Transfer System of bank`,
       assignedPhase: ['Documentation', 'System design'],
@@ -617,6 +649,7 @@ const config = {
       startTime: '2017-01',
       endTime: '2019-5',
       teamSize: 1,
+      location: 'Taiwan',
       role: 'Leader',
       company: 'B',
       description: `A system for managing orders for fabric production from manufacturers, allowing coordination of orders, production progress, and shipping. This system is designed to integrate with the manufacturer's own ERP system. Simultaneously, it enables tracking of customer orders and associated production progress.`,
@@ -649,6 +682,14 @@ const config = {
           type: 'ProgrammingLanguage',
         },
         {
+          name: 'HTML',
+          type: 'ProgrammingLanguage',
+        },
+        {
+          name: 'CSS',
+          type: 'ProgrammingLanguage',
+        },
+        {
           name: 'T-SQL',
           type: 'ProgrammingLanguage',
         },
@@ -670,6 +711,10 @@ const config = {
         },
         {
           name: 'EntityFramework',
+          type: 'Framework',
+        },
+        {
+          name: '.NET Framework',
           type: 'Framework',
         },
         {
@@ -695,6 +740,7 @@ const config = {
       startTime: '2017-01',
       endTime: '2019-5',
       teamSize: 8,
+      location: 'Taiwan',
       role: 'Sub Leader',
       company: 'B',
       description: `Due to excessive technical debt in the system, maintenance tasks have reached their limits, and there is a significant impact on adding new features. Therefore, reconstruction is necessary`,
@@ -739,6 +785,10 @@ const config = {
           type: 'Database',
         },
         {
+          name: '.NET Framework',
+          type: 'Framework',
+        },
+        {
           name: 'EntityFramework',
           type: 'Framework',
         },
@@ -781,6 +831,7 @@ const config = {
       startTime: '2016-08',
       endTime: '2016-12',
       teamSize: 5,
+      location: 'Taiwan',
       role: 'Member',
       company: 'C',
       description: `To provide better customer service, we aim to improve the instability of the old system.`,
@@ -805,7 +856,7 @@ const config = {
           type: 'ProgrammingLanguage',
         },
         {
-          name: 'Javascript',
+          name: 'CSS',
           type: 'ProgrammingLanguage',
         },
         {
@@ -818,6 +869,10 @@ const config = {
         },
         {
           name: 'Javascript',
+          type: 'ProgrammingLanguage',
+        },
+        {
+          name: 'HTML',
           type: 'ProgrammingLanguage',
         },
         {
@@ -838,6 +893,10 @@ const config = {
         },
         {
           name: 'EntityFramework',
+          type: 'Framework',
+        },
+        {
+          name: '.NET Framework',
           type: 'Framework',
         },
         {
@@ -875,6 +934,7 @@ const config = {
       startTime: '2016-04',
       endTime: '2016-07',
       teamSize: 50,
+      location: 'Taiwan',
       role: 'Member',
       company: 'D',
       description: `The entire team is composed of two outsourcing companies and contract personnel, totaling around 50 participants. They are implementing the necessary functionalities based on documents provided by the contract company's system architect (SA)`,
@@ -886,7 +946,7 @@ const config = {
           type: 'ProgrammingLanguage',
         },
         {
-          name: 'Javascript',
+          name: 'CSS',
           type: 'ProgrammingLanguage',
         },
         {
@@ -895,6 +955,10 @@ const config = {
         },
         {
           name: 'Javascript',
+          type: 'ProgrammingLanguage',
+        },
+        {
+          name: 'HTML',
           type: 'ProgrammingLanguage',
         },
         {
@@ -907,6 +971,10 @@ const config = {
         },
         {
           name: 'ASP.NET MVC',
+          type: 'Framework',
+        },
+        {
+          name: '.NET Framework',
           type: 'Framework',
         },
         {
@@ -936,6 +1004,7 @@ const config = {
       startTime: '2014-02',
       endTime: '2016-04',
       teamSize: 4,
+      location: 'Taiwan',
       role: 'Member',
       company: 'D',
       description: `Maintenance work for the existing system`,
@@ -951,6 +1020,14 @@ const config = {
         },
         {
           name: 'Javascript',
+          type: 'ProgrammingLanguage',
+        },
+        {
+          name: 'CSS',
+          type: 'ProgrammingLanguage',
+        },
+        {
+          name: 'HTML',
           type: 'ProgrammingLanguage',
         },
         {
@@ -971,6 +1048,10 @@ const config = {
         },
         {
           name: 'EntityFramework',
+          type: 'Framework',
+        },
+        {
+          name: '.NET Framework',
           type: 'Framework',
         },
         {
@@ -1000,6 +1081,7 @@ const config = {
       startTime: '2015-08',
       endTime: '2015-12',
       teamSize: 4,
+      location: 'Taiwan',
       role: 'Member',
       company: 'D',
       description: `Some stored procedures were created by a dedicated DBA in the past, but due to the growth in data volume, performance has significantly deteriorated. Therefore, measures are being taken to address this.`,
@@ -1041,6 +1123,7 @@ const config = {
       startTime: '2015-12',
       endTime: '2016-04',
       teamSize: 4,
+      location: 'Taiwan',
       role: 'Member',
       company: 'D',
       description: `Due to the tax reform in the United States, it is necessary to revise the existing calculation methods. However, the customer has purchased an external tax calculation service and will integrate it`,
@@ -1069,6 +1152,10 @@ const config = {
         },
         {
           name: 'EntityFramework',
+          type: 'Framework',
+        },
+        {
+          name: '.NET Framework',
           type: 'Framework',
         },
         {

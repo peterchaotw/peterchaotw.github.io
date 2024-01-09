@@ -67,6 +67,10 @@ export default class ProjectItem extends React.Component<
                     <table className="table">
                       <tbody>
                         <tr>
+                          <th>Location</th>
+                          <td>{this.props.location}</td>
+                        </tr>
+                        <tr>
                           <th>Team Size</th>
                           <td>{this.props.teamSize}</td>
                         </tr>

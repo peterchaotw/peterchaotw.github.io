@@ -21,6 +21,7 @@ export interface WorkExperienceConfig {
   name: string;
   startTime: string;
   endTime?: string;
+  location?: string;
   teamSize: number;
   skills: SkillConfig[];
   role: string;
