@@ -396,7 +396,7 @@ const config = {
       ],
       skills: [
         {
-          name: 'JAVA',
+          name: 'Java',
           type: 'ProgrammingLanguage',
         },
         {
@@ -421,7 +421,7 @@ const config = {
         },
         {
           name: 'Linux',
-          type: 'ProgrammingLanguage',
+          type: 'OperationSystem',
         },
         {
           name: 'Oracle',
