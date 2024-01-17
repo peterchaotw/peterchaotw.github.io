@@ -94,6 +94,10 @@ const config = {
           type: 'Database',
         },
         {
+          name: 'Cobol2002',
+          type: 'Tool',
+        },
+        {
           name: 'MIDMOST/DE',
           type: 'Framework',
         },
@@ -176,6 +180,10 @@ const config = {
         },
         {
           name: 'Git',
+          type: 'Tool',
+        },
+        {
+          name: 'VSCode',
           type: 'Tool',
         },
         {
@@ -282,6 +290,10 @@ const config = {
           type: 'Other',
         },
         {
+          name: 'VSCode',
+          type: 'Tool',
+        },
+        {
           name: 'JIRA',
           type: 'Other',
         },
@@ -350,6 +362,10 @@ const config = {
         {
           name: 'Spring Servlet',
           type: 'Framework',
+        },
+        {
+          name: 'Eclipse',
+          type: 'Tool',
         },
         {
           name: 'Git',
@@ -445,6 +461,10 @@ const config = {
           type: 'Tool',
         },
         {
+          name: 'Eclipse',
+          type: 'Tool',
+        },
+        {
           name: 'Waterfall',
           type: 'DevelopmentMethodology',
         },
@@ -511,6 +531,10 @@ const config = {
         },
         {
           name: 'SVN',
+          type: 'Tool',
+        },
+        {
+          name: 'VisualStudio',
           type: 'Tool',
         },
         {
@@ -598,6 +622,10 @@ const config = {
           type: 'Tool',
         },
         {
+          name: 'VisualStudio',
+          type: 'Tool',
+        },
+        {
           name: 'Waterfall',
           type: 'DevelopmentMethodology',
         },
@@ -636,6 +664,10 @@ const config = {
         },
         {
           name: 'SVN',
+          type: 'Tool',
+        },
+        {
+          name: 'VisualStudio',
           type: 'Tool',
         },
         {
@@ -716,6 +748,10 @@ const config = {
         {
           name: '.NET Framework',
           type: 'Framework',
+        },
+        {
+          name: 'VisualStudio',
+          type: 'Tool',
         },
         {
           name: 'ASP.NET MVC',
@@ -810,6 +846,10 @@ const config = {
         },
         {
           name: 'SVN',
+          type: 'Tool',
+        },
+        {
+          name: 'VisualStudio',
           type: 'Tool',
         },
         {
@@ -920,6 +960,14 @@ const config = {
           type: 'Framework',
         },
         {
+          name: 'SublimeText',
+          type: 'Tool',
+        },
+        {
+          name: 'VisualStudio',
+          type: 'Tool',
+        },
+        {
           name: 'greenlet',
           type: 'Framework',
         },
@@ -980,6 +1028,14 @@ const config = {
         {
           name: 'EntityFramework',
           type: 'Framework',
+        },
+        {
+          name: 'Angularjs',
+          type: 'Framework',
+        },
+        {
+          name: 'VisualStudio',
+          type: 'Tool',
         },
         {
           name: 'JQuery',
@@ -1067,6 +1123,10 @@ const config = {
           type: 'Database',
         },
         {
+          name: 'VisualStudio',
+          type: 'Tool',
+        },
+        {
           name: 'JIRA',
           type: 'Other',
         },
@@ -1107,6 +1167,10 @@ const config = {
         {
           name: 'Agile',
           type: 'DevelopmentMethodology',
+        },
+        {
+          name: 'VisualStudio',
+          type: 'Tool',
         },
         {
           name: 'JIRA',
@@ -1161,6 +1225,10 @@ const config = {
         {
           name: 'JQuery',
           type: 'Framework',
+        },
+        {
+          name: 'VisualStudio',
+          type: 'Tool',
         },
         {
           name: 'RestSharp',
