@@ -9,6 +9,7 @@ import Skill from './skill';
 import Certification from './certification';
 import Education from './education';
 import Footer from './footer';
+import ProfileController from './profile-contoller';
 import '../assets/index.css';
 import { defaultColors } from '../assets/consts';
 import { connect } from 'react-redux';
@@ -30,6 +31,7 @@ class GitProfile extends React.Component<any, any, any> {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-box">
                 <div className="col-span-1">
                   <div className="grid grid-cols-1 gap-6">
+                    <ProfileController />
                     <AvatarCard />
                     <Detail />
                     <Skill />

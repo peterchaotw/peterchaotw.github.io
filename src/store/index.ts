@@ -8,6 +8,7 @@ import educationReducer from './slices/education.slice';
 import languageReducer from './slices/language.slice';
 import workexperienceReducer from './slices/workexperience.slice';
 import skillReducer from './slices/skill.slice';
+import profileConfigReducer from './slices/profile-controller.slice';
 
 const reducers = combineReducers({
   github: githubprofileReducer,
@@ -18,6 +19,7 @@ const reducers = combineReducers({
   language: languageReducer,
   workexperience: workexperienceReducer,
   skill: skillReducer,
+  profileConfig: profileConfigReducer,
 });
 const store = configureStore({
   reducer: reducers,

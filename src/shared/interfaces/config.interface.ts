@@ -3,6 +3,11 @@ import type SkillType from '../enums/skill-type';
 import type IError from './error.interface';
 import type LanguageType from '../enums/language-type';
 
+export interface ProfileConfig {
+  local?: string;
+  theme: string;
+}
+
 export interface GithubUserInfo {
   username: string;
   limit?: number;
