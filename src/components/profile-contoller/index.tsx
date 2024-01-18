@@ -5,13 +5,12 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import { type ProfileConfig } from '../../shared/interfaces/config.interface';
 import React from 'react';
 import { connect } from 'react-redux';
 import { setMode } from '../../store/slices/profile-controller.slice';
 import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
 
-class ProfileController extends React.Component<ProfileConfig, any, any> {
+class ProfileController extends React.Component<any, any, any> {
   getState() {
     const state = {
       isDarkMode: this.props.theme === 'dark',
@@ -20,10 +19,10 @@ class ProfileController extends React.Component<ProfileConfig, any, any> {
     return state;
   }
 
-  handleChange(e) {
+  handleChange(e: any) {
     const theme = e.target.checked ? 'dark' : 'light';
     this.props.dispatch(setMode(theme));
-    document.querySelector('html').setAttribute('data-theme', theme);
+    document?.querySelector('html')?.setAttribute('data-theme', theme);
   }
 
   render() {
