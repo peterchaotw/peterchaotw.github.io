@@ -43,6 +43,11 @@ const config = {
       description: 'JLPT N2',
       date: '2018-12',
     },
+    {
+      name: 'N1',
+      description: 'JLPT N1',
+      date: '2024-01',
+    },
   ],
   education: [
     {
